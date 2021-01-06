@@ -61,6 +61,28 @@ body {
     letter-spacing: 1.75rem;
     animation: move-in-right 1s forwards; }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  letter-spacing: .2rem;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skew(15deg, 2deg) scale(1.05);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bot-8 {
+  margin-bottom: 8rem; }
+
 .header {
   display: flex;
   justify-content: center;
@@ -109,6 +131,11 @@ body {
     width: calc(( (calc((100% - 18rem)/4)) * 2 ) + 6rem); }
   .row .col-3-of-4 {
     width: calc(( (calc((100% - 18rem)/4)) * 3 ) + 12rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  margin-top: -20vh;
+  padding: 25rem 0; }
 
 .btn:link, .btn:visited {
   display: inline-block;
