@@ -12,6 +12,10 @@ body {
   padding: 3rem;
   box-sizing: border-box; }
 
+a {
+  display: inline-block;
+  text-decoration: none; }
+
 @keyframes move-in-left {
   0% {
     opacity: 0;
@@ -41,7 +45,7 @@ body {
     transform: translateY(0); } }
 
 body {
-  font: 400 1.6rem/1.7 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+  font: 400 1.6rem/1.7 "Lato", Verdana, Geneva, Tahoma, sans-serif;
   color: #777; }
 
 .heading-primary {
@@ -77,11 +81,27 @@ body {
     transform: skew(15deg, 2deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bot-8 {
+.u-margin-bot-big {
   margin-bottom: 8rem; }
+
+.u-margin-bot-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bot-small {
+  margin-bottom: 1.5rem; }
 
 .header {
   display: flex;
@@ -138,10 +158,8 @@ body {
   padding: 25rem 0; }
 
 .btn:link, .btn:visited {
-  display: inline-block;
   position: relative;
   text-transform: uppercase;
-  text-decoration: none;
   padding: 1.5rem 4rem;
   border-radius: 10rem;
   transition: all 0.2s; }
@@ -163,13 +181,14 @@ body {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   outline: none; }
-  .btn:hover::after, .btn:focus::after {
-    transform: scale(1.4, 1.6);
-    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover::after, .btn:focus::after {
+  transform: scale(1.4, 1.6);
+  opacity: 0; }
 
 .btn--white {
   background-color: #fff;
@@ -179,3 +198,23 @@ body {
 
 .btn--animated {
   animation: move-in-up 0.5s backwards 0.75s; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  border-bottom: solid 1px #55c57a;
+  padding: .3rem;
+  transition: all 0.2s; }
+
+.btn-text:hover, .btn-text:focus {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  outline: none; }
+
+.btn-text:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn-text:hover, .btn-text:focus {
+  background-color: #55c57a;
+  color: #fff; }

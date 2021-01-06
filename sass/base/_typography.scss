@@ -1,5 +1,5 @@
 body {
-    font: 400 1.6rem/1.7 'Lato', Verdana, Geneva, Tahoma, sans-serif ;
+    font: 400 #{$text-size}/1.7 'Lato', Verdana, Geneva, Tahoma, sans-serif ;
     color: $color-grey-dark; 
 }
 .heading-primary {
@@ -33,10 +33,21 @@ body {
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     letter-spacing: .2rem;
-    transition: all 0.2s ;
+    transition: $transition ;
 
     &:hover {
         transform: skew(15deg ,2deg) scale(1.05);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+.heading-tertiary {
+    font-size: $text-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph {
+    font-size: $text-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }

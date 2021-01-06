@@ -5,3 +5,15 @@
         clear: both;
     }
 }
+@mixin buttons-hover-active-effect {
+    &:hover,
+    &:focus {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        outline: none;
+    }
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+}
