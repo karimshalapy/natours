@@ -33,3 +33,9 @@
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
 }
+@mixin center-element-absolute-position($top: 50%) {
+    position: absolute;
+    top: $top;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

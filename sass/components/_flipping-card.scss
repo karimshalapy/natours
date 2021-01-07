@@ -109,10 +109,7 @@
     &__cta {
         text-align: center;
         width: 90%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center-element-absolute-position;
     }
     &__price-box {
         color: $color-white;

@@ -16,10 +16,7 @@
         height: 3.5rem;
     }
     &__content-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
+        @include center-element-absolute-position(40%);  
         text-align: center;
-        transform: translate(-50%, -50%);
     }
 }
