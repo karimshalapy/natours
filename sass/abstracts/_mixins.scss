@@ -17,3 +17,19 @@
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
 }
+@mixin background-image-with-color-overlay($img-url) {
+    background-size: cover;
+    background-position: top;
+    background: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),url($img-url);
+}
+@mixin clip-text-to-gradient-background {
+    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}

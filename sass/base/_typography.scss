@@ -23,15 +23,11 @@ body {
     }
 }
 .heading-secondary {
+    @include clip-text-to-gradient-background;
     display: inline-block;
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    background-clip: text;
-    color: transparent;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
     letter-spacing: .2rem;
     transition: $transition ;
 
