@@ -1,0 +1,45 @@
+.flipping-card {
+    perspective: 150rem;
+        -moz-perspective: 150rem;
+    position: relative;
+
+    &__side {
+        transition: all .8s ease;
+        height: 50rem;
+        backface-visibility: hidden; //card goes hidden (visibility hidden) when it's flipped back
+        border-radius: .3rem;
+        box-shadow: $shadow-light;
+        &--front {
+            background-color: $color-white;
+            transform: rotateY(0deg);
+        }
+        &--back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: rotateY(180deg);
+            &--1{
+                background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary);
+            }
+            &--2{
+                background: linear-gradient(to right bottom, $color-primary-light, $color-primary);
+            }
+            &--3{
+                background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary);
+            }
+        }
+    }
+
+    &:hover &__side,
+    &:focus-within &_side {
+        &--front {
+            transform: rotateY(180deg);
+        }
+        &--back {
+            transform: rotateY(360deg);
+        }
+    }
+
+}
