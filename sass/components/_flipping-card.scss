@@ -34,8 +34,7 @@
         }
     }
 
-    &:hover &__side,
-    &:focus-within &_side {
+    &:focus-within &__side, &:hover &__side {
         &--front {
             transform: rotateY(180deg);
         }
@@ -56,10 +55,10 @@
             background-image:   $gradient-secondary, url("../img/nat-5.jpg")
         }
         &--2 {
-            background-image:   $gradient-primary, url("../img/nat-5.jpg")
+            background-image:   $gradient-primary, url("../img/nat-6.jpg")
         }
         &--3 {
-            background-image:   $gradient-tertiary, url("../img/nat-5.jpg")
+            background-image:   $gradient-tertiary, url("../img/nat-7.jpg")
         }
     }
     &__heading {
@@ -71,7 +70,7 @@
         top: 12rem;
         right: 2rem;
         text-align: right;
-        width: 50%;
+        width: 75%;
     }
     &__heading-span {
         box-decoration-break: clone;
@@ -103,6 +102,28 @@
                     border-bottom: 1px solid $color-grey-light-2;
                 }
             }
+        }
+    }
+
+    //back side elements styling
+    &__cta {
+        text-align: center;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__price-box {
+        color: $color-white;
+        margin-bottom: 8rem;
+        &-text {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }   
+        &-value {
+            font-size: 6rem;
+            font-weight: 100;
         }
     }
 }
