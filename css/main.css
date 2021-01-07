@@ -160,7 +160,7 @@ body {
 .section-features {
   background-size: cover;
   background-position: top;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg");
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   padding: 20rem 0;
   margin-top: -10rem;
   transform: skewY(-7deg); }
@@ -285,9 +285,10 @@ body {
   position: relative; }
   .flipping-card__side {
     transition: all .8s ease;
-    height: 50rem;
+    min-height: 52rem;
     backface-visibility: hidden;
     border-radius: .3rem;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .flipping-card__side--front {
       background-color: #fff;
@@ -311,3 +312,48 @@ body {
   .flipping-card:hover .flipping-card__side--back,
   .flipping-card:focus-within .flipping-card_side--back {
     transform: rotateY(360deg); }
+  .flipping-card__picture {
+    background-size: cover;
+    background: linear-gradient();
+    background-blend-mode: screen;
+    height: 23rem;
+    clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0); }
+    .flipping-card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+    .flipping-card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #55c57a), url("../img/nat-5.jpg"); }
+    .flipping-card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-5.jpg"); }
+  .flipping-card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 50%; }
+  .flipping-card__heading-span {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 1rem 1.5rem;
+    opacity: .85; }
+    .flipping-card__heading-span--1 {
+      background: linear-gradient(to right bottom, #ffb900, #ff7730); }
+    .flipping-card__heading-span--2 {
+      background: linear-gradient(to right bottom, #7ed56f, #55c57a); }
+    .flipping-card__heading-span--3 {
+      background: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .flipping-card__details {
+    padding: 3rem; }
+    .flipping-card__details-list {
+      width: 80%;
+      margin: auto;
+      list-style-type: none; }
+      .flipping-card__details-list-item {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .flipping-card__details-list-item:not(:last-child) {
+          border-bottom: 1px solid #eee; }

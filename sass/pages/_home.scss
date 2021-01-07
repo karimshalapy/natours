@@ -5,7 +5,7 @@
     // clip-path: polygon(0vh 20vh, 100% 0, 100% calc(100% - 20vh), 0 100%);
 }
 .section-features {
-    @include background-image-with-color-overlay("../../img/nat-4.jpg");
+    @include background-image-with-color-overlay("../img/nat-4.jpg");
     padding: 20rem 0;
     margin-top: -10rem;
     transform: skewY(-7deg);

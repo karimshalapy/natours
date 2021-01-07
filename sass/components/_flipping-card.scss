@@ -1,13 +1,15 @@
 .flipping-card {
+    //functionality styling
     perspective: 150rem;
         -moz-perspective: 150rem;
     position: relative;
 
     &__side {
         transition: all .8s ease;
-        height: 50rem;
+        min-height: 52rem;
         backface-visibility: hidden; //card goes hidden (visibility hidden) when it's flipped back
         border-radius: .3rem;
+        overflow: hidden;
         box-shadow: $shadow-light;
         &--front {
             background-color: $color-white;
@@ -21,13 +23,13 @@
             bottom: 0;
             transform: rotateY(180deg);
             &--1{
-                background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary);
+                background: $gradient-secondary
             }
             &--2{
-                background: linear-gradient(to right bottom, $color-primary-light, $color-primary);
+                background: $gradient-primary
             }
             &--3{
-                background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary);
+                background: $gradient-tertiary
             }
         }
     }
@@ -42,4 +44,65 @@
         }
     }
 
+    //front side elements styling
+    &__picture {
+        background-size: cover;
+        background: linear-gradient();
+        background-blend-mode: screen;
+        height: 23rem;
+        clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+
+        &--1 {
+            background-image:   $gradient-secondary, url("../img/nat-5.jpg")
+        }
+        &--2 {
+            background-image:   $gradient-primary, url("../img/nat-5.jpg")
+        }
+        &--3 {
+            background-image:   $gradient-tertiary, url("../img/nat-5.jpg")
+        }
+    }
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 50%;
+    }
+    &__heading-span {
+        box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        padding: 1rem 1.5rem;
+        opacity: .85;
+        &--1{
+            background: $gradient-secondary
+        }
+        &--2{
+            background: $gradient-primary
+        }
+        &--3{
+            background: $gradient-tertiary
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        &-list {
+            width: 80%;
+            margin: auto;
+            list-style-type: none;
+            &-item {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
 }
