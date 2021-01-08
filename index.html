@@ -40,7 +40,7 @@
                 <span class="heading-primary--main">outdoors</span>
                 <span class="heading-primary--sub">is where life happens</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="#cards" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header>
     <main>
@@ -120,7 +120,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-tours">
+        <section class="section-tours" id="tours">
             <div class="u-center-text u-margin-bot-big">
                 <h3 class="heading-secondary">Most popular tours</h3>
             </div>
@@ -150,7 +150,7 @@
                                     <p class="flipping-card__price-box-text">Only</p>
                                     <data value="297" class="flipping-card__price-box-value">$297</data>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -180,13 +180,13 @@
                                     <p class="flipping-card__price-box-text">Only</p>
                                     <data value="497" class="flipping-card__price-box-value">$497</data>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-1-of-3">
-                    <div class="flipping-card">
+                    <div class="flipping-card" id="cards">
                         <div class="flipping-card__side flipping-card__side--front flipping-card__side--front--3">
                             <div class="flipping-card__picture flipping-card__picture--3">&nbsp;</div>
                             <h4 class="flipping-card__heading">
@@ -210,13 +210,40 @@
                                     <p class="flipping-card__price-box-text">Only</p>
                                     <data value="897" class="flipping-card__price-box-value">$897</data>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <a href="#" class="btn btn--green">Discover all tours</a>
+            <article class="popup" id="popup">
+                <div class="popup__content">
+                    <div class="popup__content-left">
+                        <img src="./img/nat-8.jpg" alt="Tour photo" class="popup__image" />
+                        <img src="./img/nat-9.jpg" alt="Tour photo" class="popup__image" />
+                    </div>
+                    <div class="popup__content-right">
+                        <h2 class="heading-secondary">Start booking now</h2>
+                        <h3 class="heading-tertiary u-margin-bot-small">Important &ndash; read these terms before
+                            booking</h3>
+                        <p class="popup__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fuga saepe aliquam. Magnam
+                            repellat asperiores eveniet est magni itaque nulla quas, totam harum quisquam ut sequi
+                            repellendus! Eos, cupiditate est magnam recusandae maiores ducimus veniam soluta nisi
+                            dolore
+                            voluptatum fugiat animi sint nihil eveniet illo dignissimos velit hic labore autem
+                            voluptas.
+                            Iure dicta quam magnam? Asperiores libero vitae eius id voluptas laudantium corporis.
+                            Laboriosam, placeat architecto sapiente, adipisci perspiciatis non facere possimus sit
+                            consequatur ad, rem hic eius. Aliquam, temporibus! Repudiandae ab fuga, distinctio
+                            aspernatur saepe quidem odio adipisci.
+                        </p>
+                        <a href="#" class="btn btn--green">Book now</a>
+                    </div>
+                    <a href="#cards" class="popup__close-link">&times;</a>
+                </div>
+            </article>
         </section>
         <section class="section-stories">
             <div class="u-center-text u-margin-bot-big">

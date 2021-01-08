@@ -1,6 +1,7 @@
 html {
     //this defines 1rem to be 10px if the default browser font size is 16px
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 *,
 *::after,

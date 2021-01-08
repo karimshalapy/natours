@@ -1,0 +1,74 @@
+.popup {
+    @include fixed-position(2000, 0,0,0,0);
+    background-color: rgba($color-black, .8);
+    backdrop-filter: blur(.3rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-slow;
+
+    &:target {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    &__content {
+        @include center-element-absolute-position;
+        width: 80%;
+        background-color: $color-white;
+        border-radius: $border-radius-default;
+        box-shadow: $shadow-light;
+        display: table;
+        text-align: left;
+        overflow: hidden;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: $transition-slow;
+
+        &-left, &-right {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &-left {
+            width: 33.3333333%;
+        }
+        &-right {
+            width: 66.6666667%;
+            padding: 3rem 5rem;
+        }
+    }
+    &:target &__content  {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    &__image {
+        display: block;
+        width: 100%;
+    }
+    &__text {
+        text-align: justify;
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+        hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+    }
+    &__close-link {
+        display: block;
+        position: absolute;
+        color: $color-grey-dark-1;
+        font-weight: 700;
+        font-size: 2.5rem;
+        top: 5rem;
+        right: 6rem;
+        padding: 1rem;
+        transition: $transition;
+        line-height: 1;
+
+        &:hover,
+        &:focus {
+            color: $color-primary
+        }
+    }
+}
