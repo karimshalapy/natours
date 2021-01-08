@@ -152,6 +152,41 @@ body {
   .row .col-3-of-4 {
     width: calc(( (calc((100% - 18rem)/4)) * 3 ) + 12rem); }
 
+.footer {
+  background-color: #333;
+  font-size: 1.4rem;
+  padding: 10rem;
+  color: #f7f7f7; }
+  .footer .footer__navigation-list, .footer .footer__copyright-text {
+    border-top: 1px solid #777;
+    padding-top: 2rem; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 15rem; }
+  .footer__navigation-list {
+    list-style: none;
+    width: max-content; }
+    .footer__navigation-list-item {
+      display: inline-block; }
+      .footer__navigation-list-item:not(:last-child) {
+        margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    background-color: #333;
+    color: #f7f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2s; }
+  .footer__link:hover, .footer__link:focus {
+    color: #55c57a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.1) rotate(-5deg);
+    outline: none; }
+  .footer__copyright-text {
+    width: 90%; }
+
 .section-about {
   background-color: #f7f7f7;
   margin-top: -20vh;
