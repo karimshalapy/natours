@@ -1,0 +1,97 @@
+.form {
+    //inputs containers styling
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        &-radio {
+            display: inline-block;
+            width: 45%;
+        }
+    }
+
+    //custom inputs styling
+    &__input {
+        display: block;
+        width: 90%;
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: $border-radius-default;
+        background-color: rgba($color-white, .5);
+        border: none;
+        outline: none;
+        border-bottom: solid .3rem transparent;
+        transition: $transition;
+        &:focus {
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: solid .3rem $color-primary;
+
+            &:invalid {
+                border-bottom: solid .3rem $color-secondary;
+            }
+        }
+        &::placeholder,
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+    }
+    &__input:placeholder-shown + &__label{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    &__label {
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: .7rem 0 0 2rem;
+        opacity: 1;
+        transform: translateY(0);
+        transition: $transition;
+    }
+    
+    //Custom radio buttons styling
+    %custom-radio-button {
+        content: "";
+        visibility: visible;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+    }
+    &__radio-input {
+        opacity: 0;
+       
+    }
+    &__radio-input:checked + &__radio-label::before {
+        opacity: 1;
+    } 
+    &__radio-input:focus + &__radio-label::after {
+        border: .3rem solid $color-primary;
+    } 
+    &__radio-label {
+        cursor: pointer;
+        font-size: $text-size;
+        position: relative;
+        &::after {
+            @extend %custom-radio-button;
+            width: 2rem;
+            height: 2rem;
+            border: .2rem solid $color-primary;
+            top: 0rem;
+            left: -2.5rem;
+            cursor: pointer;
+        }
+        &::before {
+            @extend %custom-radio-button;
+            width: 1rem;
+            height: 1rem;
+            background-color: $color-primary;
+            top: .5rem;
+            left: -2rem;
+            opacity: 0;
+            transition: $transition;
+        }
+
+    }
+}
