@@ -8,7 +8,7 @@
         transition: all .8s ease;
         min-height: 52rem;
         backface-visibility: hidden; //card goes hidden (visibility hidden) when it's flipped back
-        border-radius: .3rem;
+        border-radius: $border-radius-default;
         overflow: hidden;
         box-shadow: $shadow-light;
         &--front {
