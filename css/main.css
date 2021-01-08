@@ -9,7 +9,6 @@ html {
   box-sizing: inherit; }
 
 body {
-  padding: 3rem;
   box-sizing: border-box; }
 
 a {
@@ -186,6 +185,132 @@ body {
     outline: none; }
   .footer__copyright-text {
     width: 90%; }
+
+.navigation__checkbox {
+  position: fixed;
+  top: 9.5rem;
+  right: 9.5rem;
+  bottom: auto;
+  left: auto;
+  z-index: 1000;
+  width: 1px;
+  height: 1px;
+  opacity: 0; }
+
+.navigation__button {
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  bottom: auto;
+  left: auto;
+  z-index: 1010;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center; }
+
+.navigation__icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    transition: all 0.2s; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .navigation__icon::before {
+    top: -.75rem; }
+  .navigation__icon::after {
+    bottom: -.75rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  bottom: -1rem; }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  background-color: transparent; }
+  .navigation__checkbox:checked ~ .navigation__button .navigation__icon::before, .navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+    top: 0rem;
+    bottom: 0; }
+  .navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+    transform: rotate(-135deg); }
+
+.navigation__background {
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  bottom: auto;
+  left: auto;
+  z-index: 1000;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100); }
+
+.navigation__nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  opacity: 0;
+  width: 0;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+  .navigation__nav-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center; }
+    .navigation__nav-list-item {
+      padding: 1rem;
+      counter-increment: item 1; }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+  pointer-events: all; }
+
+.navigation__link:link, .navigation__link:visited {
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  background-image: linear-gradient(120deg, transparent 50%, #fff 50%);
+  background-size: 250%; }
+  .navigation__link:link:hover, .navigation__link:link:focus, .navigation__link:link:active, .navigation__link:visited:hover, .navigation__link:visited:focus, .navigation__link:visited:active {
+    transform: translateX(1rem);
+    background-position: 100%;
+    outline: none;
+    color: #55c57a; }
+
+.navigation__link::before {
+  content: "0" counter(item);
+  margin-right: 1.5rem;
+  text-align: right; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -538,7 +663,6 @@ body {
   content: "";
   visibility: visible;
   display: block;
-  border-radius: 50%;
   position: absolute;
   transition: all 0.2s; }
 
@@ -557,16 +681,18 @@ body {
   font-size: 1.6rem;
   position: relative; }
   .form__radio-label::after {
-    width: 2rem;
     height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
     border: 0.2rem solid #55c57a;
     top: 0rem;
     left: -2.5rem;
     cursor: pointer;
     box-shadow: 0px 0px 0px 0rem rgba(0, 0, 0, 0.75); }
   .form__radio-label::before {
-    width: 1rem;
     height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
     background-color: #55c57a;
     top: .5rem;
     left: -2rem;

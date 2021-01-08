@@ -56,7 +56,6 @@
         content: "";
         visibility: visible;
         display: block;
-        border-radius: 50%;
         position: absolute;
         transition: $transition;
     }
@@ -77,8 +76,7 @@
         position: relative;
         &::after {
             @extend %custom-radio-button;
-            width: 2rem;
-            height: 2rem;
+            @include circle-element(2rem);
             border: .2rem solid $color-primary;
             top: 0rem;
             left: -2.5rem;
@@ -87,8 +85,7 @@
         }
         &::before {
             @extend %custom-radio-button;
-            width: 1rem;
-            height: 1rem;
+            @include circle-element(1rem);
             background-color: $color-primary;
             top: .5rem;
             left: -2rem;

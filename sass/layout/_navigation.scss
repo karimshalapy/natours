@@ -1,0 +1,113 @@
+.navigation {
+    //default checkbox
+    &__checkbox { 
+        @include fixed-position(1000, 9.5rem, 9.5rem);
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+    //checkbox label styled as a button
+    &__button { 
+        @include fixed-position(1010, 6rem, 6rem);
+        @include circle-element(7rem);
+        background-color: $color-white;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        cursor: pointer;
+        text-align: center;
+    }
+    //hamburger menu icon inside label
+    &__icon {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-darkest;
+            display: inline-block;
+           transition: $transition;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+        &::before { top: -.75rem; }
+        &::after { bottom: -.75rem; }
+    }
+    &__button:hover &__icon {
+        &::before { top: -1rem; }
+        &::after { bottom: -1rem; }
+    }
+    &__checkbox:checked ~ &__button &__icon {
+        background-color: transparent;
+        &::before, &::after { top: 0rem; bottom: 0 }
+        &::before { transform: rotate(135deg); }
+        &::after { transform: rotate(-135deg); }
+    }
+    //nav big background
+    &__background { 
+        @include fixed-position(1000, 6.5rem, 6.5rem);
+        @include circle-element(6rem);
+        background: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 1000;
+        transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    &__checkbox:checked ~ &__background {
+        transform: scale(100)
+    }
+    //nav element styling with the nested navlist
+    &__nav{
+        @include fixed-position(1001, 0, 0, 0, 0);
+        opacity: 0;
+        width: 0;
+        pointer-events: none;
+        transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        &-list{
+            @include center-element-absolute-position;
+            list-style: none;
+            text-align: center;
+            &-item {
+                padding: 1rem;
+                counter-increment: item 1;
+            }
+        }
+    }
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+        pointer-events: all;
+    }
+    //nav links styling
+    &__link { 
+        &:link,
+        &:visited {
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: $transition-slow;
+            background-image: linear-gradient(120deg, transparent 50%, $color-white 50%);
+            background-size: 250%;
+            &:hover,
+            &:focus,
+            &:active {
+                transform: translateX(1rem);
+                background-position: 100%;
+                outline: none;
+                color: $color-primary;
+            }
+        }
+        &::before {
+            content: "0" counter(item);
+            margin-right: 1.5rem;
+            text-align: right;
+        }
+    }
+
+}
