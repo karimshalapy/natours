@@ -38,9 +38,24 @@
     background-size: cover;
     border-radius: $border-radius-default;
     box-shadow: $shadow-dark;
+    @include respond(tablet-land) {
+        background: linear-gradient(105deg, rgba($color-white, .9) 70%, transparent 70%),
+        url("../img/nat-10.jpg");
+    }
+    @include respond(tablet-port) {
+        background: linear-gradient(to right, rgba($color-white, .9) 100%, transparent 100%),
+        url("../img/nat-10.jpg");
+    }
+
     &__inner {
         width: 50%;
         padding: 6rem;
         margin-right: auto;
+        @include respond(tablet-land) {
+            width: 65%;
+        }
+        @include respond(tablet-port) {
+            width: 100%;
+        }
     }
 }
