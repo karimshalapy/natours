@@ -12,6 +12,10 @@ html {
         font-size: #{(8/16)*100%};
     }
 }
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
 *,
 *::after,
 *::before {
