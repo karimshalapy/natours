@@ -29,10 +29,12 @@
         }
         &-left {
             width: 33.3333333%;
+            @include respond(tablet-port) { display: none; }
         }
         &-right {
             width: 66.6666667%;
             padding: 3rem 5rem;
+            @include respond(tablet-port) { width: 100%;}
         }
     }
     &:target &__content  {
@@ -53,6 +55,8 @@
             -webkit-hyphens: auto;
             -moz-hyphens: auto;
             -ms-hyphens: auto;
+        @include respond(phone) { column-count: 1; }
+        
     }
     &__close-link {
         display: block;
@@ -65,10 +69,14 @@
         padding: 1rem;
         transition: $transition;
         line-height: 1;
-
+        
         &:hover,
         &:focus {
             color: $color-primary
         }
+        @include respond(phone) { 
+            top: 3rem;
+            right: 2rem;
+         }
     }
 }
