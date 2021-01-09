@@ -6,6 +6,7 @@
     border-radius: $border-radius-default;
     box-shadow: $shadow-light;
     transition: $transition;
+    @include respond(tablet-port) { padding: 2rem; }
     &:hover {
         transform: translateY(-1.5rem) scale(1.05)
     }
@@ -13,5 +14,6 @@
         @include clip-text-to-gradient-background;
         font-size: 6rem;
         margin-bottom: .5rem;
+       @include respond(tablet-port) { margin-bottom: 0; }
     }
 }

@@ -118,9 +118,15 @@ body {
 
 .u-margin-bot-big {
   margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bot-big {
+      margin-bottom: 5rem !important; } }
 
 .u-margin-bot-medium {
   margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bot-medium {
+      margin-bottom: 3rem !important; } }
 
 .u-margin-bot-small {
   margin-bottom: 1.5rem !important; }
@@ -128,7 +134,7 @@ body {
 .header {
   background-size: cover;
   background-position: top;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,27 +396,40 @@ body {
 .section-features {
   background-size: cover;
   background-position: top;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-repeat: no-repeat;
   padding: 20rem 0;
   margin-top: -10rem;
   transform: skewY(-7deg); }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 10rem 0; } }
   .section-features > * {
     transform: skewY(7deg); }
 
 .section-tours {
   margin-top: -10rem;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem;
   background-color: #f7f7f7;
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 20rem 0 10rem; } }
 
 .section-stories {
   padding: 15rem 0;
   text-align: center;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-booking {
   padding: 15rem 0;
   background: linear-gradient(to right bottom, #7ed56f, #55c57a); }
+  @media (max-width: 56.25em) {
+    .section-booking {
+      padding: 10rem 0; } }
 
 .form-box {
   background: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
@@ -509,9 +528,21 @@ body {
     .composition__photo--p2 {
       top: 2rem;
       right: 0; }
+      @media (max-width: 56.25em) {
+        .composition__photo--p2 {
+          transform: scale(1.2) translateY(-2rem);
+          z-index: 1; } }
     .composition__photo--p3 {
       top: 10rem;
       left: 20%; }
+    @media (max-width: 56.25em) {
+      .composition__photo {
+        position: relative;
+        display: inline-block;
+        width: 30%;
+        top: auto;
+        left: auto;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); } }
     .composition__photo:hover {
       z-index: 5;
       transform: scale(1.05) translateY(-0.5rem);
@@ -527,6 +558,9 @@ body {
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .feature-box {
+      padding: 2rem; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
   .feature-box__icon {
@@ -537,6 +571,9 @@ body {
     -webkit-background-clip: text;
     font-size: 6rem;
     margin-bottom: .5rem; }
+    @media (max-width: 56.25em) {
+      .feature-box__icon {
+        margin-bottom: 0; } }
 
 .flipping-card {
   perspective: 150rem;
