@@ -713,8 +713,16 @@ body {
   border-radius: 0.3rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      transform: skewX(0); } }
   .story > * {
     transform: skewX(12deg); }
+    @media (max-width: 56.25em) {
+      .story > * {
+        transform: skewX(0); } }
   .story:hover .story__shape-img {
     filter: blur(0.3rem) brightness(0.8);
     transform: translateX(-4rem) scale(1); }
@@ -723,6 +731,9 @@ body {
     top: 50%; }
   .story__text {
     text-align: left; }
+    @media (max-width: 56.25em) {
+      .story__text {
+        text-align: center; } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -732,6 +743,11 @@ body {
     shape-outside: circle(50%);
     -webkit-shape-outside: circle(50%);
     position: relative; }
+    @media (max-width: 56.25em) {
+      .story__shape {
+        float: none;
+        display: block;
+        margin: 0 auto 2rem; } }
     .story__shape-img {
       max-height: 100%;
       transition: all 0.5s ease;
