@@ -1,5 +1,5 @@
 .header {
-    @include background-image-with-color-overlay("../img/hero.jpg");
+    @include background-image-with-color-overlay("../img/hero-small.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,9 @@
     @include respond(phone) {
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100% );
     }
-
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        @include background-image-with-color-overlay("../img/hero.jpg");
+    }
     &__logo-box {
         position: absolute;
         top: 4rem;
