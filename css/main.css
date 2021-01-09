@@ -64,6 +64,10 @@ body {
   font-size: 6rem;
   letter-spacing: 3.5rem;
   margin-bottom: 6rem; }
+  @media (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 5rem;
+      letter-spacing: 1rem; } }
   .heading-primary--main {
     display: block;
     animation: move-in-left 1s forwards; }
@@ -73,6 +77,9 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: move-in-right 1s forwards; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   background: linear-gradient(to right, #7ed56f, #28b485);
@@ -86,6 +93,12 @@ body {
   font-weight: 700;
   letter-spacing: .2rem;
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skew(15deg, 2deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
