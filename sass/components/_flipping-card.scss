@@ -3,6 +3,9 @@
     perspective: 150rem;
         -moz-perspective: 150rem;
     position: relative;
+    @include respond(tablet-port) {
+        box-shadow: $shadow-light;
+    }
 
     &__side {
         transition: all .8s ease;
@@ -11,9 +14,16 @@
         border-radius: $border-radius-default;
         overflow: hidden;
         box-shadow: $shadow-light;
+        @include respond(tablet-port){
+            min-height: max-content;
+            box-shadow: none;
+        }
         &--front {
             background-color: $color-white;
             transform: rotateY(0deg);
+            @include respond(tablet-port){
+                padding-bottom: 5rem;
+            }
         }
         &--back {
             position: absolute;
@@ -31,15 +41,23 @@
             &--3{
                 background: $gradient-tertiary
             }
+            @include respond(tablet-port){
+                transform: rotateY(0);
+                position: relative;
+                margin-top: -8rem;
+                clip-path: polygon(0 15% , 0 100%, 100% 100%, 100% 0);
+            }
         }
     }
 
     &:focus-within &__side, &:hover &__side {
         &--front {
             transform: rotateY(180deg);
+            @include respond(tablet-port){ transform: rotateY(0); }
         }
         &--back {
             transform: rotateY(360deg);
+            @include respond(tablet-port){ transform: rotateY(0); }
         }
     }
 
@@ -110,10 +128,19 @@
         text-align: center;
         width: 90%;
         @include center-element-absolute-position;
+        @include respond(tablet-port){
+            margin: auto;
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: translate(0);
+            padding: 7rem 4rem 4rem;
+        }
     }
     &__price-box {
         color: $color-white;
         margin-bottom: 8rem;
+        @include respond(tablet-port) { margin-bottom: 5rem; }
         &-text {
             font-size: 1.4rem;
             text-transform: uppercase;
@@ -121,6 +148,7 @@
         &-value {
             font-size: 6rem;
             font-weight: 100;
+            @include respond(tablet-port) { font-size: 5rem; }
         }
     }
 }

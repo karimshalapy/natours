@@ -579,6 +579,9 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .flipping-card {
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); } }
   .flipping-card__side {
     transition: all .8s ease;
     min-height: 52rem;
@@ -586,9 +589,16 @@ body {
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    @media (max-width: 56.25em) {
+      .flipping-card__side {
+        min-height: max-content;
+        box-shadow: none; } }
     .flipping-card__side--front {
       background-color: #fff;
       transform: rotateY(0deg); }
+      @media (max-width: 56.25em) {
+        .flipping-card__side--front {
+          padding-bottom: 5rem; } }
     .flipping-card__side--back {
       position: absolute;
       top: 0;
@@ -602,10 +612,22 @@ body {
         background: linear-gradient(to right bottom, #7ed56f, #55c57a); }
       .flipping-card__side--back--3 {
         background: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      @media (max-width: 56.25em) {
+        .flipping-card__side--back {
+          transform: rotateY(0);
+          position: relative;
+          margin-top: -8rem;
+          clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0); } }
   .flipping-card:focus-within .flipping-card__side--front, .flipping-card:hover .flipping-card__side--front {
     transform: rotateY(180deg); }
+    @media (max-width: 56.25em) {
+      .flipping-card:focus-within .flipping-card__side--front, .flipping-card:hover .flipping-card__side--front {
+        transform: rotateY(0); } }
   .flipping-card:focus-within .flipping-card__side--back, .flipping-card:hover .flipping-card__side--back {
     transform: rotateY(360deg); }
+    @media (max-width: 56.25em) {
+      .flipping-card:focus-within .flipping-card__side--back, .flipping-card:hover .flipping-card__side--back {
+        transform: rotateY(0); } }
   .flipping-card__picture {
     background-size: cover;
     background: linear-gradient();
@@ -658,15 +680,29 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 56.25em) {
+      .flipping-card__cta {
+        margin: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0);
+        padding: 7rem 4rem 4rem; } }
   .flipping-card__price-box {
     color: #fff;
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .flipping-card__price-box {
+        margin-bottom: 5rem; } }
     .flipping-card__price-box-text {
       font-size: 1.4rem;
       text-transform: uppercase; }
     .flipping-card__price-box-value {
       font-size: 6rem;
       font-weight: 100; }
+      @media (max-width: 56.25em) {
+        .flipping-card__price-box-value {
+          font-size: 5rem; } }
 
 .story {
   width: 75%;
