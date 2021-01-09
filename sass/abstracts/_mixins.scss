@@ -55,13 +55,13 @@
 //MEDIA QUERIES MIXINS
 @mixin respond($screen-size) { 
     @if $screen-size == phone {
-        @media (max-width: #{(600/16)}em) { @content; } 
+        @media only screen and (max-width: #{(600/16)}em) { @content; } 
     } @else if $screen-size == tablet-port {
-        @media (max-width: #{(900/16)}em) { @content; } 
+        @media only screen and (max-width: #{(900/16)}em) { @content; } 
     } @else if $screen-size == tablet-land {
-        @media (max-width: #{(1200/16)}em) { @content; } 
+        @media only screen and (max-width: #{(1200/16)}em) { @content; } 
     } @else if $screen-size == big-desktop {
-        @media (min-width: #{(1800/16)}em) { @content; } 
+        @media only screen and (min-width: #{(1800/16)}em) { @content; } 
     } @else{
         @error "Unknown screen size! $screen-size: #{$screen-size}.";
     }
