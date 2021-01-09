@@ -1,19 +1,14 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
+    @include respond(tablet-port) { max-width: $grid-width-small; }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @include respond(tablet-port) { margin-bottom: $gutter-vertical-small; }
     }
 
     @include clearfix;
-
-    %col-placeholder {
-        float: left;
-        &:not(:last-child) {
-            margin-right: $gutter-horizontal;
-        }
-    }
     .col-1-of-2 {
         width: $col-1-of-2-width;
         @extend %col-placeholder;
@@ -43,5 +38,15 @@
         @extend %col-placeholder;
 
     }
-
+    %col-placeholder {
+        float: left;
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+            @include respond(tablet-port) { 
+                margin-bottom: $gutter-vertical-small;
+                margin-right: 0; 
+            }
+        }
+        @include respond(tablet-port) { width: 100%; }
+    }
 }

@@ -19,7 +19,9 @@ $gradient-secondary: linear-gradient(to right bottom, $color-secondary-light, $c
 $gradient-tertiary: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary);
 //grid
 $grid-width: 114rem;
+$grid-width-small: 50rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 $col-1-of-2-width: calc((100% - #{$gutter-horizontal})/2);
 $col-1-of-3-width: calc((100% - #{2 * $gutter-horizontal})/3);
