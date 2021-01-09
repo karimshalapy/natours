@@ -3,6 +3,9 @@
     font-size: 1.4rem;
     padding: 10rem;
     color: $color-grey-light-1;
+
+    @include respond(tablet-port) { padding: 8rem 0; }
+
     %border-top {
         border-top: 1px solid $color-grey-dark-1;
         padding-top: 2rem;
@@ -22,6 +25,11 @@
             @extend %border-top;
             list-style: none;
             width: max-content;
+            @include respond(tablet-port) { 
+                width: 100%;
+                text-align: center;
+             }
+
             &-item {
                 display: inline-block;
                 &:not(:last-child) {
@@ -53,5 +61,9 @@
     &__copyright-text {
         @extend %border-top;
         width: 90%;
+        @include respond(tablet-port) { 
+            width: 100%;
+            text-align: center;
+         }
     }
 }

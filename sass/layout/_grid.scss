@@ -1,7 +1,10 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
-    @include respond(tablet-port) { max-width: $grid-width-small; }
+    @include respond(tablet-port) { 
+        padding: 0 3rem;
+        max-width: $grid-width-small; 
+    }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
